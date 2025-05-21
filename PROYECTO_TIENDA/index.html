@@ -16,15 +16,23 @@
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-6">
             <!-- Título del sitio web -->
             <h1 class="text-2xl font-bold text-blue-900">Tienda Online</h1>
-            <!-- Menú de navegación -->
-            <nav>
-                <ul class="flex space-x-6">
-                    <!-- Enlaces del menú -->
-                    <li><a href="#" class="hover:text-gray-400 font-bold">Inicio</a></li>
-                    <li><a href="#" class="hover:text-gray-400 font-bold">Productos</a></li>
-                    <li><a href="#" class="hover:text-gray-400 font-bold">Contacto</a></li>
-                </ul>
-            </nav>
+            <!-- Menú de navegación y botón de cerrar sesión alineados a la derecha -->
+            <div class="flex items-center space-x-6">
+                <nav>
+                    <ul class="flex space-x-6">
+                        <!-- Enlaces del menú -->
+                        <li><a href="#" class="hover:text-gray-400 font-bold">Inicio</a></li>
+                        <li><a href="#" class="hover:text-gray-400 font-bold">Productos</a></li>
+                        <li>
+                            <a href="contacto.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Botón de cierre de sesión -->
+                <button id="btn-logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">
+                    Cerrar sesión
+                </button>
+            </div>
         </div>
         <!-- Barra de búsqueda -->
         <div class="container mx-auto mt-4 px-6">
@@ -115,9 +123,5 @@
     </script>
     <!-- Archivo JavaScript -->
     <script src="app.js"></script>
-    <!-- Botón de cierre de sesión -->
-    <button id="btn-logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">
-        Cerrar sesión
-    </button>
 </body>
 </html>

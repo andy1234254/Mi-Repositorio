@@ -125,7 +125,7 @@ function filtrarProductos() {
 }
 
 function mostrarProductos(productos) {
-    contenedorProductos.innerHTML = ""; // Limpia el contenedor de productos
+    contenedorProductos.innerHTML = "";
     productos.forEach((producto) => {
         const productoDiv = document.createElement("div");
         productoDiv.className =
@@ -134,9 +134,13 @@ function mostrarProductos(productos) {
             <img src="${producto.image}" alt="${producto.title}" class="w-32 h-32 object-cover mb-4">
             <h3 class="text-lg font-semibold mb-2">${producto.title}</h3>
             <p class="text-gray-700 mb-2">${producto.description}</p>
-            <button class="mt-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
+            <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300" onclick="window.location.href='detalle.html?id=${producto.id}'">
+                Ver Detalles
+            </button>
+            <button class="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors duration-300">
                 Agregar al carrito
-            </button>`;
-        contenedorProductos.appendChild(productoDiv); // Agrega el producto al contenedor
+            </button>
+        `;
+        contenedorProductos.appendChild(productoDiv);
     });
 }
